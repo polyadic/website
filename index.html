@@ -86,18 +86,18 @@
                     </ul>
 
                     <div id="panel-dotnet-cli" role="tabpanel" aria-labelledby="tab-dotnet-cli" class="panel">
-                        <code>dotnet add package Funcky --version 2.7.1</code>
+                        <code>dotnet add package Funcky --version {{PackageVersion}}</code>
                     </div>
 
                     <div id="panel-package-refererence" role="tabpanel" aria-labelledby="tab-package-refererence" class="panel">
-                        <code>&lt;PackageReference Include="Funcky" Version="2.7.1" /&gt;</code>
+                        <code>&lt;PackageReference Include="Funcky" Version="{{PackageVersion}}" /&gt;</code>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="_container">© 2022 Polyadic.</div>
+        <div class="_container">© {{Year}} Polyadic.</div>
     </footer>
     <script type="module" src="tabs.js"></script>
 </body>
