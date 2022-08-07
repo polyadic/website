@@ -117,11 +117,17 @@ footer {
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
-    grid-gap: 8px;
+    align-items: stretch;
+    gap: 0 8px;
+}
+
+.nuget-box .tabs li {
+    display: contents;
 }
 
 .nuget-box .tab {
     cursor: pointer;
+    font-size: 14px;
     padding: 6px var(--nuget-box-horizontal-padding);
     border-radius: 6px 6px 0 0;
     background-color: var(--primary-color);
@@ -183,5 +189,14 @@ p:not(:last-child),
 @media (max-width: 550px) {
     .feature-list {
         grid-template-columns: 1fr;
+    }
+
+    .nuget-box .tabs {
+        grid-auto-flow: row;
+        justify-content: stretch;
+    }
+
+    .nuget-box .tabs li:not(:first-child) .tab {
+        border-radius: 0;
     }
 }

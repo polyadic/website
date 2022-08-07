@@ -79,12 +79,22 @@
                 <div class="nuget-box">
                     <ul role="tablist" class="tabs">
                         <li role="presentation">
-                            <button id="tab-dotnet-cli" aria-expanded="false" aria-selected="true" aria-controls="panel-dotnet-cli" role="tab" class="tab">.NET CLI</button> 
+                            <button id="tab-package-manager" aria-expanded="false" aria-selected="true" aria-controls="panel-package-manager" role="tab" class="tab">Package Manager</button> 
+                        </li>
+                        <li role="presentation">
+                            <button id="tab-dotnet-cli" aria-expanded="false" aria-selected="true" aria-controls="panel-dotnet-cli" role="tab" class="tab" data-default-tab>.NET CLI</button> 
                         </li>
                         <li role="presentation">
                             <button id="tab-package-refererence" aria-expanded="false" aria-selected="false" aria-controls="panel-package-refererence" role="tab" class="tab">PackageReference</button> 
                         </li>
+                        <li role="presentation">
+                            <button id="tab-script-interactive" aria-expanded="false" aria-selected="false" aria-controls="panel-script-interactive" role="tab" class="tab">Script &amp; Interactive</button> 
+                        </li>
                     </ul>
+
+                    <div id="panel-package-manager" role="tabpanel" aria-labelledby="tab-package-manager" class="panel">
+                        <code>Install-Package Funcky -Version {{PackageVersion}}</code>
+                    </div>
 
                     <div id="panel-dotnet-cli" role="tabpanel" aria-labelledby="tab-dotnet-cli" class="panel">
                         <code>dotnet add package Funcky --version {{PackageVersion}}</code>
@@ -92,6 +102,10 @@
 
                     <div id="panel-package-refererence" role="tabpanel" aria-labelledby="tab-package-refererence" class="panel">
                         <code>&lt;PackageReference Include="Funcky" Version="{{PackageVersion}}" /&gt;</code>
+                    </div>
+                    
+                    <div id="panel-script-interactive" role="tabpanel" aria-labelledby="tab-script-interactive" class="panel">
+                        <code>#r "nuget: Funcky, {{PackageVersion}}"</code>
                     </div>
                 </div>
             </div>

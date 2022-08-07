@@ -7,6 +7,6 @@ function updateActiveTab(activeTab) {
     tabs.forEach(t => { t.setAttribute('aria-expanded', t === activeTab); t.setAttribute('aria-active', t === activeTab) })
 }
 
-updateActiveTab(tabs[0])
+updateActiveTab(tabs.filter(t => t.hasAttribute('data-default-tab'))[0])
 
 tabs.forEach(tab => tab.addEventListener('click', _ => updateActiveTab(tab)))
