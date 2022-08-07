@@ -55,7 +55,7 @@ nav ul {
     list-style-type: none;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 42px;
+    gap: 42px;
     justify-content: right;
 }
 
@@ -155,7 +155,7 @@ p:not(:last-child),
     display: grid;
     list-style-type: none;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px;
+    gap: 24px;
 }
 
 .feature-list .feature {
@@ -181,7 +181,7 @@ p:not(:last-child),
 
 @media (max-width: 1024px) {
     .navigation-block ul {
-        grid-gap: 24px;
+        gap: 24px;
         justify-content: left;
     }
 }
